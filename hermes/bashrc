@@ -36,6 +36,14 @@ function configure_editor {
   export EDITOR=/usr/local/bin/vim
 }
 
+function configure_tomcat {
+  export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.32/libexec
+}
+
+function configure_aliases {
+  alias l="ls -laF"
+}
+
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 load_homebrew_command_completions
@@ -43,5 +51,8 @@ source_modules
 configure_rvm
 configure_editor
 tmuxify_command_prompt
+
+configure_tomcat
+configure_aliases
 
 eval `direnv hook $0`
