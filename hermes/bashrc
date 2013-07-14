@@ -36,28 +36,14 @@ function configure_editor {
   export EDITOR=/usr/local/bin/vim
 }
 
-function configure_tomcat {
-  export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.32/libexec
-}
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 
-function configure_aliases {
-  alias l="ls -laF"
-}
-
-function configure_java {
-  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
-}
-
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/python:~/bin:$PATH
+export PRJ_H="${HOME}/projects"
 
 load_homebrew_command_completions
 source_modules
 configure_rvm
 configure_editor
 tmuxify_command_prompt
-
-configure_java
-configure_tomcat
-configure_aliases
 
 eval `direnv hook $0`

@@ -59,6 +59,7 @@ set complete=.,w,b
 " Tags
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags -R --exclude=.git --exclude=log -f ./.tags *"
 set tags+=.tags
+set tags+=/Users/jeff/java7.tags
 
 let mapleader = ","
 
